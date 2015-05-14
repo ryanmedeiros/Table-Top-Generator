@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Table_Top_Generator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="npc_selection">NPC</string>
+    <string name="village_selection">Village</string>
+
+    <string-array name="job_array">
+        <item>Bartender</item>
+        <item>Tailor</item>
+        <item>Guard</item>
+    </string-array>
+
+    <string-array name="race_array">
+        <item>Dwarf</item>
+        <item>Human</item>
+        <item>Elf</item>
+    </string-array>
+    <string name="title_activity_npcgenerator">NPCGenerator</string>
+
+</resources>
