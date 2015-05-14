@@ -5,15 +5,34 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 
 public class NPCGenerator extends ActionBarActivity {
+
+    CustomComponent job;
+    CustomComponent race;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_npcgenerator);
-        Log.d("trial","hey hey");
+
+        job = new CustomComponent(R.id.job_box, "Job", this);
+        applyAdapter(job.list, R.array.job_array);
+
+        race = new CustomComponent(R.id.race_box, "Race", this);
+        applyAdapter(race.list, R.array.race_array);
+    }
+
+    public void applyAdapter(Spinner component, int array){
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                array,android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        component.setAdapter(adapter);
     }
 
     @Override
